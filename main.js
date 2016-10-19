@@ -12,6 +12,7 @@ prompt.start();
 
 game = {
 	// create or import a list of words
+  // confuse about how to import words from game.js to wordBank 
 	wordBank : Game.gameWord.wordList,
 	// count of words Found
 	// wordsWon : 0;
