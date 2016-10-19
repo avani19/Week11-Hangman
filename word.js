@@ -22,33 +22,38 @@ this.wordFound = false;
 	//found the current word
 	this.didWeFindTheWord = function() {
 		//sets this.found in the word object to true or false if all letter objects have a true value in their appear property
-		this.Wordfound = this.letter.every(function(checkLetter){
-      return checkLetter.Wordfound;
-		});
+		// this.Wordfound = this.letter.every(function(checkLetter){
+  //     return checkLetter.Wordfound;
+		// });
+    if(this.letters.every(function(isLtr){
+      return isLtr.appear === true;
+    })){
+      this.wordFound = true;
+      return true;
+    }
 	};
 
 	this.checkIfLetterFound = function(guessLetter) {
  var whatToReturn =0;
 // iterate through the collection of letter Objects
- for(var i=0; i<this.letter.length; i++){
+ this.letters.forEach(function(isLtr){
+      if(isLtr.letter === guessedLetter){
+        isLtr.appear = true;
+        whatToReturn++;
+      }
+    })
       // if guessLetter matches Letter property, the letter object should be shown
-      if(this.letter[i].let===guessLetter){
-      this.letter[i].letterShown = true;
-      whatToReturn++;
 		return whatToReturn;
-		console.log('What to Return: ' + whatToReturn);
-	}
-}
 	};
 
 	this.wordRender = function() {
 		var str = " ";
 // render the word based on if letters are found or ot found
-for(var i = 0; i<this.letter.length; i++){
-	 str += this.let[i].letterRender();
+this.letters.forEach(function(isLtr){
+      var currentLetter = isLtr.letterRender();
+      str += currentLetter;
+    });
 		return str;
-		 console.log('Word Rendered : ' + str);
-	}
 	};
 }
 
