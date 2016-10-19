@@ -10,7 +10,7 @@ var wordGameStart = Game.gameWord.game;
 
 prompt.start();
 
-var game = {
+game = {
 	// create or import a list of words
 	wordBank : Game.gameWord.wordList,
 	// count of words Found
@@ -76,7 +76,7 @@ this.currentWrd = new Word(RandomWord);
 				// if user has no guesses left, show them the word and tell them they lost
 			if (self.guessesRemaining === 0){
               console.log("Game Over !!"); 
-              console.log("The word Guessed was:"+self.RandomWord);
+              console.log("The word Guessed:"+self.RandomWord);
             }else {
 				// else show the user word and rendered
 				console.log(self.currentWrd.wordRender);
