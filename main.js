@@ -1,8 +1,8 @@
 
-var game = require('./game.js');
+var Game = require('./game.js');
 var Word = require('./word.js');
 var wordGameStart = Game.gameWord.game;
-console.log(gameStart);
+// console.log(gameStart);
 // require prompt to use to make the game 
 var prompt = require('prompt');
 var inquirer = require('inquirer');
