@@ -37,7 +37,8 @@ var Word = function(wrd){
     var whatToReturn =0;
     // iterate through the collection of letter Objects
     this.letters.forEach(function(isLtr){
-      if(isLtr.letter === guessedLetter){
+      //changed guessedLetter to guessLetter to match argument on line 36
+      if(isLtr.letter === guessLetter){
         isLtr.appear = true;
         whatToReturn++;
       }
