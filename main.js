@@ -81,7 +81,7 @@ game = {
             console.log("The word Guessed:"+self.RandomWord);
           }else {
     				// else show the user word and rendered
-            //you were logging the function itself instead of what the function returns, added '()' zfter wordRender to fix this
+            //you were logging the function itself instead of what the function returns, added '()' after wordRender to fix this
     				console.log(self.currentWrd.wordRender());
             //added self.keepPromptingUser(); so same continues
             self.keepPromptingUser();
