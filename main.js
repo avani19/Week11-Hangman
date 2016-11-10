@@ -29,8 +29,8 @@ game = {
 		//populate currentWrd (made from Word constructor function) object with letters
     this.currentWrd = new Word(RandomWord);
     this.currentWrd.getLets();
+		//you were calling keepPromptingUser twice here, which was causing an error, I removed the second call
     this.keepPromptingUser();
-		this.keepPromptingUser();
 	}, 
 	resetGuessesRemaining : function(){
     // reset guess count for new game	
