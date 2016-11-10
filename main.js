@@ -1,7 +1,8 @@
-
+//I changed this varibel from game to Game, because on line 4 you are referring to it as 'Game', not 'game'
 var Game = require('./game.js');
 var Word = require('./word.js');
 var wordGameStart = Game.gameWord.game;
+// commented out line 6, as gameStart is undefined
 // console.log(gameStart);
 // require prompt to use to make the game 
 var prompt = require('prompt');
