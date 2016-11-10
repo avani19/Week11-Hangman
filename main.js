@@ -52,7 +52,7 @@ game = {
 	    //if the user guessed incorrectly minus the number of guesses they have left
 			// and console.log if they were incorrect or correct
 			if(letterFoundByUserGuess===0){
-        self.guessesRemaining ;
+        self.guessesRemaining;
         console.log("You Guessed Wrong Word!!");
       }else{
         console.log("You Guessed Right Word!");
